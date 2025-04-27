@@ -19,16 +19,7 @@ Email Address: 220081621@aston.ac.uk
 Address: Lorem ipsum.
       </pre>
                 <p class="history">
-                    Comfort Kitchen brings the heartwarming flavors of Italy straight to
-                    your home, specializing in authentic and innovative pizzas inspired
-                    by centuries-old traditions. Rooted in Naples, the birthplace of
-                    pizza, our menu celebrates the rich heritage of Italian cuisine
-                    while adding a modern twist. From classic Margherita with its simple
-                    yet bold flavors to gourmet creations like truffle mushroom and
-                    spicy Diavola, each pizza is crafted with fresh, high-quality
-                    ingredients. Born from a passion for comfort food, Comfort Kitchen
-                    reimagines the art of pizza-making, blending old-world charm with
-                    contemporary flavors for a truly satisfying experience.
+                Welcome to Comfort Kitchen — your cozy corner for sharing and discovering delicious homemade recipes! Whether you're a passionate home cook or just starting out, Comfort Kitchen is the perfect place to find, share, and celebrate comforting meals from around the world. Share your favorite dishes and get inspired by the creativity of our growing community!
                 </p>
 
                 <h2 class="mt-4"

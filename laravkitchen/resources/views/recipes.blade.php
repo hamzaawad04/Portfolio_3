@@ -14,7 +14,9 @@
                     <p class="card-text">{{ $recipe->description }}</p>
                     <p class="card-text"><strong>Cooking Time:</strong> {{ $recipe->cookingtime }} minutes</p>
                     <p class="card-text"><strong>Cuisine Type:</strong> {{ $recipe->type }}</p>
-                    <a href="{{ url('/recipes/' . $recipe->rid) }}" class="btn btn-primary">View Recipe</a>
+                    <div class="text-center mt-3">
+                        <a href="{{ url('/recipes/' . $recipe->rid) }}" class="btn btn-warning">View Recipe</a>
+                    </div>
                 </div>
             </div>
         </div>

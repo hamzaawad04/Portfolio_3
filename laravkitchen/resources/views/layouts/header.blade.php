@@ -51,7 +51,7 @@
                     @if (Request::is('recipes') || Request::is('recipes/*'))
                         <form class="d-flex ms-auto align-items-center" method="GET" action="{{ url('/recipes') }}">
                             <input class="form-control form-control-sm me-2 w-auto" type="search" name="search"
-                                placeholder="Search recipes with recipe name or author" aria-label="Search">
+                                placeholder="Search recipes with name or cuisine" aria-label="Search">
                             <button class="btn btn-sm btn-outline-light" type="submit">Search</button>
                         </form>
                     @endif

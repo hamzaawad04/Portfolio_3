@@ -55,10 +55,7 @@ html, body {
 }
 
 #contact-form-container {
-    background-color: white;
-    border-radius: 5px;
-    padding: 5px;
-    border: #333 2px solid;
+    background-color: rgb(197, 166, 126);
 }
 
 #contact-form-container h4 {
@@ -74,7 +71,7 @@ html, body {
     text-align: center;
 }
 
-#number-input, #email-input {
+#password {
     padding: 5px;
 }   
 
