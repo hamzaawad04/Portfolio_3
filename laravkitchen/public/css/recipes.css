@@ -1,0 +1,56 @@
+body {
+    padding-top: 56px;
+    background-color: rgb(87, 21, 21);
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #333;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#recipes {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 100%;
+    padding: 0%;
+}
+
+.tab-content {
+    background-color: burlywood;
+    text-align: left;
+    padding: 0%;
+    padding-top: 1%;
+    overflow-y: hidden;
+}
+
+#recipes .nav {
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+#recipe-image {
+    height: 55vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+#recipe-title-bbq, #recipe-title-truffle, #recipe-title-firecracker {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+
