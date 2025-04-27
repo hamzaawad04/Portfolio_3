@@ -1,14 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecipeController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [RecipeController::class, 'showFeatured']);
 
-Route::get('/recipes', function () {
-    return view('recipes');
-});
+Route::get('/recipes', [RecipeController::class, 'index']);
 
 Route::get('/contact', function () {
     return view('contact');
@@ -21,3 +18,5 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/recipes/{rid}', [RecipeController::class, 'show']);
