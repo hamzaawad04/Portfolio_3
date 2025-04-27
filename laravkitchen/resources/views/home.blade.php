@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="row" id="home-row">
-      <div class="col-sm-8 g-0">
+      <div class="col-sm-8 g-0" style="height: 100vh;">
         <img
           src="{{ asset('images/comfort_kitchen.jpg') }}"
           alt="Comfort Kitchen"
@@ -12,7 +12,7 @@
           id="home-img"
         />
       </div>
-      <div class="col-sm-4 bg-success g-0">
+      <div class="col-sm-4 bg-success g-0" style="height: 100vh;">
         <div class="container" id="introduction">
           <h1>Welcome to Comfort Kitchen</h1>
           <pre>
@@ -34,70 +34,22 @@ Address: Lorem ipsum.
             contemporary flavors for a truly satisfying experience.
           </p>
         </div>
+        <div class="container" id="featured-recipes">
+          <h2>Featured Recipes</h2>
+          <div class="row">
+            @foreach ($recipes as $recipe)
+            <div class="col-sm-4 mb-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{{ asset('images/' . $recipe->image) }}" class="card-img-top" alt="{{ $recipe->name }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ $recipe->name }}</h5>
+                  <p class="card-text">{{ $recipe->description }}</p> 
+                  <a href="{{ url('/recipes/' . $recipe->rid) }}" class="btn btn-primary">View Recipe</a>
+                </div>
+              </div>
+            </div>
+            @endforeach
+          </div>
       </div>
-    </div>
-
-    <div class="container-fluid" id="recipe-box">
-      <div class="row" id="recipe-row">
-        <div class="col-sm-4">
-          <a href="{{ url('/recipes/') }} #recipe-bbq">
-            <div class="card">
-              <img
-                src="{{ asset('images/honey-barbecue-chicken-pizza-3-scaled.jpg') }}"
-                alt="BBQ Chicken Pizza"
-                class="card-img-top"
-                id="recipe_image"
-              />
-              <div class="card-img-overlay">
-                <h4 class="card-title">Smokey Maple BBQ Chicken Pizza</h4>
-                <p class="card-text">
-                  A sweet and tangy blend of maple syrup, barbecue sauce, and
-                  tender chicken, this pizza is a mouthwatering treat that will
-                  leave you craving more.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="{{ url('/recipes/') }} #recipe-truffle">
-            <div class="card">
-              <img
-                src="{{ asset('images/truffle-pizza.jpg') }}"
-                alt="Truffle Pizza"
-                class="card-img-top"
-                id="recipe_image"
-              />
-              <div class="card-img-overlay">
-                <h4 class="card-title">Truffle Honey Ricotta Delight</h4>
-                <p class="card-text">
-                  A luxurious blend of truffle oil, honey, and creamy ricotta,
-                  this pizza is a decadent treat that will satisfy your
-                  cravings.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="{{ url('/recipes/') }} #recipe-firecracker">
-            <div class="card">
-              <img
-                src="{{ asset('images/firecrackerpizza.jpg') }}"
-                alt="Firecracker Pizza"
-                class="card-img-top"
-                id="recipe_image"
-              />
-              <div class="card-img-overlay">
-                <h4 class="card-title">Spicy Mediterranean Firecracker</h4>
-                <p class="card-text">
-                  A fiery blend of Mediterranean spices and fresh herbs, this
-                  pizza is a flavor explosion that will leave you craving more.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
+</div>
 @endsection

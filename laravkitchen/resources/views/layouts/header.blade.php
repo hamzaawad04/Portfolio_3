@@ -34,18 +34,22 @@
             <li class="nav-item">
               <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
             </li>
+            @auth
+            <li class="nav-item">
+              <a class="nav-link {{ Request::is('/account') ? 'active' : '' }}" href="{{ url('/account') }}">Account</a>
+            </li>
+            @endauth
             <li class="nav-item">
               <a class="nav-link {{ Request::is('/recipes') ? 'active' : '' }}" href="{{ url('/recipes') }}">Recipes</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link {{ Request::is('/contact') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a>
-            </li>
+            @guest
             <li class="nav-item">
               <a class="nav-link {{ Request::is('/login') ? 'active' : '' }}" href="{{ url('/login') }}">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ Request::is('/register') ? 'active' : '' }}" href="{{ url('/register') }}">Register</a>
             </li>
+            @endguest
           </ul>
         </div>
       </div>
