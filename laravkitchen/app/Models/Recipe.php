@@ -9,6 +9,11 @@ class Recipe extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'rid'; // or whatever your real primary key is
+    public $incrementing = true;
+    protected $keyType = 'int';
+
+
     protected $table = 'recipes';
 
     public $timestamps = false;
