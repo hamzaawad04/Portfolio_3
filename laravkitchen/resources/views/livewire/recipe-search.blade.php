@@ -4,12 +4,14 @@
     <div class="row">
         @forelse ($recipes as $recipe)
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card bg-success">
                     <img src="{{ asset('images/' . $recipe->image) }}" class="card-img-top" alt="{{ $recipe->name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ $recipe->name }}</h5>
                         <p class="card-text">{{ $recipe->description }}</p>
-                        <a href="{{ url('/recipes/' . $recipe->rid) }}" class="btn btn-primary">View Recipe</a>
+                        <div class="text-center">
+                            <a href="{{ url('/recipes/' . $recipe->rid) }}" class="btn bg-warning btn-primary">View Recipe</a>
+                        </div>
                     </div>
                 </div>
             </div>
