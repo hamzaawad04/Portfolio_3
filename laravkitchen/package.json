@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "serve": "concurrently \"npm run dev\" \"php artisan serve\""
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
@@ -11,7 +12,7 @@
         "@vitejs/plugin-react": "^4.2.0",
         "axios": "^1.8.2",
         "bootstrap": "^5.2.3",
-        "concurrently": "^9.0.1",
+        "concurrently": "^9.1.2",
         "laravel-vite-plugin": "^1.2.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
