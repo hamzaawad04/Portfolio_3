@@ -12,16 +12,18 @@ class RecipeSearch extends Component
 
     public $searchTerm = '';
 
+    public function updatingSearchTerm()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
-
-        $searchTerm = $this->searchTerm;
-
         $recipes = Recipe::query()
-            ->when($searchTerm, function ($query) use ($searchTerm) {
-                $query->where(function($q) use ($searchTerm) {
-                    $q->where('name', 'like', '%' . $searchTerm . '%')
-                      ->orWhere('type', 'like', '%' . $searchTerm . '%');
+            ->when($this->searchTerm, function ($query) {
+                $query->where(function($q) {
+                    $q->where('name', 'like', '%' . $this->searchTerm . '%')
+                      ->orWhere('type', 'like', '%' . $this->searchTerm . '%');
                 });
             })
             ->paginate(6);

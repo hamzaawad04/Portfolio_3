@@ -1,6 +1,5 @@
 <div>
-<pre>SearchTerm: {{ $searchTerm }}</pre>
-    <input type="text" wire:model="searchTerm" class="form-control mb-4 w-50 mx-auto d-block" placeholder="Search by name or type...">
+    <input type="text" wire:model.live="searchTerm" class="form-control mb-4 w-50 mx-auto d-block" placeholder="Search recipes by name or type...">
 
     <div class="row">
         @forelse ($recipes as $recipe)
@@ -15,9 +14,10 @@
                 </div>
             </div>
         @empty
-            <p>No recipes found for "{{ $searchTerm }}"</p>
+            <p class="text-center">No recipes found for "{{ $searchTerm }}"</p>
         @endforelse
     </div>
+
     <div class="d-flex justify-content-center mt-4">
         {{ $recipes->links() }}
     </div>
